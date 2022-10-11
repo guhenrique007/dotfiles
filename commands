@@ -1,0 +1,77 @@
+// REMAPED SHORTCUTS
+right , c = ç
+right ` a = à
+right ' a = á
+right ~ a = ã
+ctrl '='  = print
+
+
+// VIM
+configs in "~/.config/nvim/init.vim"
+Y - copy all line
+yy 
+w, e, ge - navigate
+v, V, ctrlV - visual
+v shift 5 - seleciona o bloco
+shift 5 - fim do bloco
+v i <char> - select everything inside char
+v U - uppercase (u - lower)
+Telescope \ff ∥ space ff
+Telescope grep \fg  ∥ space ff
+zf - folding
+. operator
+:%s/foo/bar/g
+"_d (delete without copy -- needs remap)
+macro: q, a, *recording* , q, @a
+gn, gp - swap buffers(tabs)
+C-a - nerdTRee
+* - occurencies
+moving functions: } {
+M - go to middle
+16G - got o line 16
+0, $, ^
+
+Git:
+ "-" - Stage/Unstage after :Diffviewopen 
+
+
+Multicursor:
+	start: <C-n> start multicursor and add a virtual cursor + selection on the match
+	next: <C-n> add a new virtual cursor + selection on the next match
+	skip: <C-x> skip the next match
+	prev: <C-p> remove current virtual cursor + selection and go back on previous match
+	select all: <A-n> start multicursor and directly select all matches
+
+Buffers:
+		current commands: https://alpha2phi.medium.com/neovim-for-beginners-managing-buffers-91367668ce7
+
+
+// VSCODE - VIM
+zc, za
+visual block + shift I (inicio) | $ (fim)
+<leader> tt (new), tp (prev), to (close others), j (join line below)
+gf, gd (go to)
+C-m (vs) + C-shift L (vs) +  shift I (select and replace all occurences)
+
+// GIT
+git checkout commit_hash^ path/to/refound/deleted_file.c (Recover commited and removed file)
+
+// SO
+sudo pkill -u postgres
+
+// ZSH
+editvsvim
+zshconfig
+vimconfig
+
+// screen
+ctrl a S - split horizontal
+ctrl a | - vertical
+ctrl a tab - mudar
+ctrl a c - start the terminal
+
+
+esc - 9
+caps - 66
+
+hasura migrate apply --skip-execution
