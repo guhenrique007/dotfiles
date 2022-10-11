@@ -45,6 +45,8 @@ Multicursor:
 Buffers:
 		current commands: https://alpha2phi.medium.com/neovim-for-beginners-managing-buffers-91367668ce7
 
+// Polybar
+Reset polybar: ~/.config/polybar/launch.sh --blocks   
 
 // VSCODE - VIM
 zc, za
