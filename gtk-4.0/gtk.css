@@ -1,0 +1,27 @@
+/* UNITE windowDecorations */
+@import url('/home/gustavo/.local/share/gnome-shell/extensions/unite@hardpixel.eu/styles/gtk4/buttons-right/always.css');
+/* windowDecorations UNITE */
+decoratio, window, window.background, window.titlebar,*{
+  border-radius:0px;
+}
+
+#panel {
+  background: #589589;
+
+  .clock-display {
+    color: yellow;
+    text-align: center;
+    font-size: 11pt;
+  }
+}
+
+.titlebar, headerbar, UnityDecoration.top {
+  padding: 0px;
+  margin: 0px;
+  color: yellow;
+}
+
+.titlebar:backdrop, headerbar:backdrop {
+    background: #333333;
+    color:#807D78;
+}

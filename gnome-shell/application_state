@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="gnome-control-center.desktop" score="91.001542781752079" last-seen="1665107827"/>
+    <application id="gnome-session-properties.desktop" score="3.375" last-seen="1664497213"/>
+    <application id="xdg-desktop-portal-gtk.desktop" score="0" last-seen="1664743153"/>
+    <application id="xdg-desktop-portal-gnome.desktop" score="2" last-seen="1665082405"/>
+    <application id="org.gnome.tweaks.desktop" score="214" last-seen="1665084421"/>
+    <application id="ocs-url.desktop" score="0.25" last-seen="1664737487"/>
+    <application id="chrome-kjbdgfilnfhdoflbpgamdcdgpehopbep-Profile_1.desktop" score="34.781024723942679" last-seen="1665083126"/>
+    <application id="org.gnome.eog.desktop" score="0" last-seen="1664680920"/>
+    <application id="code.desktop" score="830.80701229937949" last-seen="1665084117"/>
+    <application id="org.gnome.Software.desktop" score="2.75" last-seen="1665060179"/>
+    <application id="sol.desktop" score="0" last-seen="1665076969"/>
+    <application id="firefox_firefox.desktop" score="0" last-seen="1665102435"/>
+    <application id="org.gnome.Screenshot.desktop" score="2" last-seen="1664974644"/>
+    <application id="org.flameshot.Flameshot.desktop" score="23" last-seen="1664977011"/>
+    <application id="org.gnome.Extensions.desktop" score="218" last-seen="1665102022"/>
+    <application id="org.gnome.Terminal.desktop" score="2287.5794600672625" last-seen="1665107602"/>
+    <application id="org.gnome.Shell.Extensions.desktop" score="34.25" last-seen="1665027944"/>
+    <application id="slack_slack.desktop" score="2318.8530086427099" last-seen="1665100034"/>
+    <application id="org.gnome.Boxes.desktop" score="128.25" last-seen="1664852266"/>
+    <application id="alacritty_alacritty.desktop" score="4.5" last-seen="1665012373"/>
+    <application id="org.gnome.Nautilus.desktop" score="125.16908204335796" last-seen="1665101943"/>
+    <application id="gnome-system-monitor.desktop" score="4.6337051511499974" last-seen="1665075983"/>
+    <application id="org.gnome.FileRoller.desktop" score="1.25" last-seen="1665074121"/>
+    <application id="org.gnome.Evince.desktop" score="1.625" last-seen="1664477531"/>
+    <application id="update-manager.desktop" score="1" last-seen="1664914037"/>
+    <application id="Zoom.desktop" score="198" last-seen="1665089761"/>
+    <application id="anydesk.desktop" score="0" last-seen="1664683932"/>
+    <application id="google-chrome.desktop" score="21923.445582478838" last-seen="1665107824"/>
+    <application id="teams.desktop" score="2" last-seen="1664973525"/>
+    <application id="org.gnome.gedit.desktop" score="523.97566069465688" last-seen="1665101208"/>
+  </context>
+</application-state>
