@@ -123,7 +123,7 @@ SPACESHIP_PROMPT_ORDER=(
   hg
   exec_time
   line_sep
-  vi_mode
+  # vi_mode
   jobs
   exit_code
   char
@@ -140,5 +140,4 @@ SPACESHIP_GIT_SYMBOL="Ḃ"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # This conflicts with git colors or any other
-source /home/gustavo/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source /home/gustavo/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
