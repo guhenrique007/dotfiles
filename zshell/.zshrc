@@ -114,6 +114,7 @@ alias pasteclip="xclip -o"
 alias dockerls="docker container ls -a --format 'table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.Status}}'"
 alias dockerstatus="docker container stats --no-stream"
 alias dockerps="docker ps -a --format 'table {{.ID}}\\t{{.Image}}\\t{{.Status}}'"
+alias gitedit="git config --global --edit"
 
 SPACESHIP_PROMPT_ORDER=(
   user
