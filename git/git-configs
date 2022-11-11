@@ -1,0 +1,35 @@
+[user]
+	email = 11997211+guhenrique007@users.noreply.github.com
+	name = Gustavo Lima
+[core]
+	editor = code -n --wait
+[alias]
+	s = !git status -s
+	l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+	c = !git commit -m 
+	pf = !git push --force-with-lease
+	fixup = !git commit --fixup
+	fix = !git commit --fixup HEAD
+	amend = !git commit --amend
+	rc = !git rebase --continue
+	abort = !git rebase --abort
+	edit = !git config --global --edit
+	gethash = !git log -n1 --format=format:"%H" | xclip
+	hash = !git log -n1 --format=format:"%H" 
+	ck = !git checkout
+	ckn = !git checkout -b
+	po = !git pull origin
+  rbi = !git rebase -i
+	df = !git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+	rsoft = !git reset --soft HEAD^
+	undo = !git restore .
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[pull]
+	rebase = merges
+[push]
+	default = current
