@@ -115,6 +115,10 @@ alias dockerls="docker container ls -a --format 'table {{.ID}}\t{{.Image}}\t{{.C
 alias dockerstatus="docker container stats --no-stream"
 alias dockerps="docker ps -a --format 'table {{.ID}}\\t{{.Image}}\\t{{.Status}}'"
 alias gitedit="git config --global --edit"
+alias polybarinit="bash ~/.config/polybar/launch.sh --blocks"
+alias i3edit="nvim .config/i3/config"
+alias fm="autorandr --load mobile"
+alias sm="autorandr --load docked"
 
 SPACESHIP_PROMPT_ORDER=(
   user
