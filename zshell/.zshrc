@@ -119,6 +119,7 @@ alias polybarinit="bash ~/.config/polybar/launch.sh --blocks"
 alias i3edit="nvim .config/i3/config"
 alias fm="autorandr --load mobile"
 alias sm="autorandr --load docked"
+alias lvim=".local/bin/lvim"
 
 SPACESHIP_PROMPT_ORDER=(
   user
