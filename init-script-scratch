@@ -1,0 +1,51 @@
+# Download dotfiles
+git clone https://github.com/guhenrique007/dotfiles.git
+mkdir dev
+mv dotfiles dev
+
+# Download oh-myzshell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# update the .zshrc
+rm -rf .zshrc
+mv dev/dotfiles/zshell/.zshrc ~
+ 
+
+# Define zsh as default bash
+chsh -s $(which zsh)
+###### logout
+
+# Install zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Fix touchpad natural scrolling
+- Identify your device in "xinput list"
+- you need to set the prop "Natural scrolling", thus check the props available:
+`xinput list-props 11 | grep "Scroll"`
+The target looks like "libinput Natural Scrolling Enabled (315):	0"
+Notice that it has an id 315, then set the prop with:  
+xinput set-prop {device_id} {prop_id} 1
+(xinput set-prop 11 315 1)
+
+This scripts needs to be tested:
+
+```
+#!/bin/bash
+
+# Identify the device id for the touchpad
+device_id=$(xinput list | grep "Touchpad" | awk -F "=" '{print $2}' | awk '{print $1}')
+
+# Get the property id for natural scrolling
+prop_id=$(xinput list-props $device_id | grep "Natural Scrolling Enabled (" | awk -F "(" '{print $2}' | awk -F ")" '{print $1}')
+
+# Set the property value for natural scrolling
+xinput set-prop $device_id $prop_id 1
+
+echo "Natural scrolling enabled for touchpad"
+```
