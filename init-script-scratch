@@ -50,6 +50,8 @@ xinput set-prop $device_id $prop_id 1
 echo "Natural scrolling enabled for touchpad"
 ```  
 
+What really solves is to add the line `Option "NaturalScrolling" "true"` to vim /usr/share/X11/xorg.conf.d/30-touchpad.conf
+
 
 # Neovim
 sudo pacman -S neovim
