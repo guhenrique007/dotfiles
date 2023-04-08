@@ -120,6 +120,8 @@ alias i3edit="nvim .config/i3/config"
 alias fm="autorandr --load mobile"
 alias sm="autorandr --load docked"
 alias lvim=".local/bin/lvim"
+#alias ncdu="ncdu"
+#alias ranger="ranger"
 
 SPACESHIP_PROMPT_ORDER=(
   user
