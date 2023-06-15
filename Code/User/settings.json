@@ -139,6 +139,18 @@
       "commands": [
         ":q"
       ]
+    },
+    {
+        "before": [ "d" ],
+        "after": [ "\"", "_", "d" ]
+    },
+    {
+        "before": [ "D" ],
+        "after": [ "\"", "_", "D" ]
+    },
+    {
+        "before": [ "d", "d" ],
+        "after": [ "\"", "_", "d", "d" ]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
