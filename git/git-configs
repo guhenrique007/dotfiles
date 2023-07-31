@@ -34,3 +34,6 @@
         rebase = merges
 [push]
         default = current
+[credential]
+	helper = store
+
