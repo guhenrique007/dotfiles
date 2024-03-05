@@ -149,3 +149,7 @@ SPACESHIP_GIT_SYMBOL="Ḃ"
 
 # This conflicts with git colors or any other
 source /home/gustavo/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# python
+source .venv/bin/activate
+
