@@ -1,8 +1,9 @@
-# Rofi
+# Requisites
 
 ❯ sudo apt install rofi
+❯ sudo apt install x-clip
 
-# Ubuntu
-## Fonts: 
-  - Iosevka
-  - Hack Nerd Font Mono
+## Fonts:
+
+- Iosevka
+- Hack Nerd Font Mono
