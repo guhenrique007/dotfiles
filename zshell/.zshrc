@@ -3,6 +3,16 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/gustavo/.oh-my-zsh"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+export ANDROID_HOME=$HOME/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK/emulator
+export PATH=$PATH:$ANDROID_SDK/tools
+export PATH=$PATH:$ANDROID_SDK/tools/bin
+export PATH=$PATH:$ANDROID_SDK/platform-tools
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,13 +112,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias home="cd ~"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
-alias zshconfig="nvim ~/.zshrc"
-alias cmdback="cd /home/gustavo/Desktop/Code/commandcenter-backend"
-alias cmdfront="cd /home/gustavo/Desktop/Code/commandcenter-frontend"
-alias cmdhasura="cd /home/gustavo/Desktop/Code/commandcenter-hasura"
-alias cmdpredicoes="cd /home/gustavo/Desktop/Code/commandcenter-predicoes"
-alias cmdintake="cd /home/gustavo/Desktop/Code/intake-engine"
-alias cmdcmd="cd /home/gustavo/Desktop/Code/commandcenter"
+alias astroconfig="cd ~/.config/nvim && nvim"
+alias zshconfig="nvim ~/dotfiles/zshell/.zshrc"
+alias safemob="cd ~/work/safeLegacy-Mobile/"
+alias safeback="cd ~/work/safeLegacy-backend/"
 alias editvsvim="nvim ~/.config/Code/User/settings.json"
 alias pasteclip="xclip -o"
 alias dockerls="docker container ls -a --format 'table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.Status}}'"
@@ -120,6 +127,10 @@ alias i3edit="nvim .config/i3/config"
 alias fm="autorandr --load mobile"
 alias sm="autorandr --load docked"
 alias lvim=".local/bin/lvim"
+alias spot="/home/gustavo/.cargo/bin/spotify_player"
+alias kitty="/home/gustavo/.local/kitty.app/bin/kitty"
+alias spotifyd="~/spotifyd/target/release/spotifyd --no-daemon"
+alias tempo="curl wttr.in"
 #alias ncdu="ncdu"
 #alias ranger="ranger"
 
@@ -151,5 +162,5 @@ SPACESHIP_GIT_SYMBOL="Ḃ"
 source /home/gustavo/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # python
-source .venv/bin/activate
+# source .venv/bin/activate
 
