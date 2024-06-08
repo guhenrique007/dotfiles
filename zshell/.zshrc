@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/gustavo/.oh-my-zsh"
+export ZSH_CUSTOM="/home/gustavo/.oh-my-zsh/custom"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export ANDROID_HOME=$HOME/Android/sdk
