@@ -6,6 +6,11 @@ sudo apt install curl
 # Git
 ln -s ~/dotfiles/git/git-configs ~/.gitconfig
 
+# Node 20
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 20
+
 # Instal zsh
 sudo apt install zsh
 chsh -s $(which zsh) # Change default shell to zsh
@@ -19,6 +24,10 @@ ln -s ~/dotfiles/zshell/.zshrc ~/.zshrc
 
 # Random dependencies
 sudo apt install x-clip
+sudo apt install gcc
+sudo apt install build-essential
+$ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+$ sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
 
 # Neovim
 sudo apt-get install neovim
