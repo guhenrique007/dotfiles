@@ -1,24 +1,104 @@
 {
+  /** Window */
+  "window.zoomLevel": -1,
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+  /** Extension: Apc */
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "frame": false
+  },
+  "apc.stylesheet": {
+    ":root": {
+      "--titlebar-height": "40px !important"
+    },
+    ".editor-container": {
+      "height": "calc(100% - var(--titlebar-height)) !important;"
+    },
+    ".split-view-view:has(>.sidebar)": {
+      "display": "flex"
+    },
+    ".decorationsOverviewRuler": {
+      "display": "none !important"
+    },
+    ".editor-actions": {
+      "display": "none !important"
+    },
+    ".tabs-and-actions-container": {
+      "--editor-group-tab-height": "40px !important"
+    },
+    ".tabs.show-file-icons": {
+      "--editor-group-tab-height": "40px !important"
+    },
+    ".part.sidebar": {
+      "display": "flex",
+      "flex-direction": "column",
+      "height": "auto"
+    },
+    ".sidebar .composite.title": {
+      "flex-direction": "column",
+      "height": "auto",
+      "padding": "0 4px"
+    },
+    ".sidebar .composite.title .title-label": {
+      "margin": "10px 0",
+      "padding-left": "0"
+    },
+    ".sidebar .composite.title h2": {
+      "width": "100%",
+      "text-align": "center"
+    },
+    ".sidebar .composite.title .title-actions .actions-container": {
+      "justify-content": "space-evenly !important"
+    }
+  },
+  /** Workbench UI */
+  "workbench.colorTheme": "Everforest Custom",
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8E7AB5",
+    "statusBar.noFolderBackground": "#8E7AB5",
+    "statusBar.debuggingBackground": "#8E7AB5",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
   "workbench.iconTheme": "material-icon-theme",
+  /** Workbench Editor */
+  "workbench.editor.limit.enabled": false,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 2,
+  "workbench.editor.limit.excludeDirty": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.preventPinnedEditorClose": "keyboard",
+  // "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.tabActionCloseVisibility": false,
+  /** Git */
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.decorations.enabled": true,
+  /** Editor Scroll */
+  "editor.smoothScrolling": true,
+  "editor.scrollbar.verticalScrollbarSize": 15,
+  "editor.stickyScroll.enabled": true,
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
   "explorer.confirmDelete": false,
-  "git.autofetch": true,
   "security.workspace.trust.untrustedFiles": "open",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "extensions.ignoreRecommendations": true,
-  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'Hack Nerd Font'",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.lineNumbers": "on",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "git.confirmSync": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -28,291 +108,166 @@
   "[prisma]": {
     "editor.formatOnSave": true
   },
-  "projectManager.git.baseFolders": [
-    "$home/workspace"
-  ],
+  "projectManager.git.baseFolders": ["$home/workspace"],
   "projectManager.sortList": "Recent",
   "vim.useSystemClipboard": true,
   "tabnine.experimentalAutoImports": true,
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
     "plaintext": true,
     "markdown": true,
+    "scminput": false,
+    "yaml": false,
     "javascript": false
   },
   "vim.enableNeovim": true,
   "vim.foldfix": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "J"
-      ],
-      "after": [
-        "5",
-        "j"
-      ]
+      "before": ["J"],
+      "after": ["5", "j"]
     },
     {
-      "before": [
-        "K"
-      ],
-      "after": [
-        "5",
-        "k"
-      ]
+      "before": ["K"],
+      "after": ["5", "k"]
     },
     {
-      "before": [
-        "<Leader>",
-        "j"
-      ],
-      "after": [
-        "J"
-      ]
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
     },
     {
-      "before": [
-        "<C-h>"
-      ],
-      "after": [
-        "<C-w>",
-        "h"
-      ]
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
     },
     {
-      "before": [
-        "<C-l>"
-      ],
-      "after": [
-        "<C-w>",
-        "l"
-      ]
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
     },
     {
-      "before": [
-        "<C-k>"
-      ],
-      "after": [
-        "<C-w>",
-        "k"
-      ]
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
     },
     {
-      "before": [
-        "<C-l>"
-      ],
-      "after": [
-        "<C-w>",
-        "l"
-      ]
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
     },
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "t"
-      ],
-      "commands": [
-        ":tabnew"
-      ]
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
     },
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "p"
-      ],
-      "commands": [
-        ":tabprev"
-      ]
+      "before": ["<Leader>", "o"],
+      "after": ["A", ",", "<CR>"]
     },
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "o"
-      ],
-      "commands": [
-        ":tabo"
-      ]
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
     },
     {
-      "before": [
-        "<Leader>",
-        "w"
-      ],
-      "commands": [
-        ":w"
-      ]
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
     },
     {
-      "before": [
-        "<Leader>",
-        "q"
-      ],
-      "commands": [
-        ":q"
-      ]
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
     },
     {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
+      "before": ["<Leader>", "w"],
+      "commands": [":w"]
     },
     {
-      "before": [
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ]
+      "before": ["<Leader>", "q"],
+      "commands": [":q"]
     },
     {
-      "before": [
-        "d",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "d"
-      ]
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["d", "d"],
+      "after": ["\"", "_", "d", "d"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["c", "c"],
+      "after": ["\"", "_", "c", "c"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "after": ["\"", "0", "p"]
+    },
+    {
+      "before": ["leader", ","],
+      "after": ["A", ","]
     },
     // splits
     {
-      "before": [
-        "leader",
-        "v"
-      ],
-      "commands": [
-        ":vsplit"
-      ]
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
     },
     {
-      "before": [
-        "leader",
-        "s"
-      ],
-      "commands": [
-        ":split"
-      ]
+      "before": ["leader", "s"],
+      "commands": [":split"]
     },
     {
-      "before": [
-        "leader",
-        "f"
-      ],
-      "commands": [
-        "revealInExplorer"
-      ]
+      "before": ["leader", "f"],
+      "commands": ["revealInExplorer"]
     },
     {
-      "before": [
-        "leader",
-        "h"
-      ],
+      "before": ["leader", "h"],
       "after": ["_"]
     },
-        {
-      "before": [
-        "leader",
-        "l"
-      ],
+    {
+      "before": ["leader", "l"],
       "after": ["$"]
-    },
+    }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<ESC>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<ESC>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
     },
     {
-      "before": [
-        "D"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ]
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
     },
     {
-      "before": [
-        "d",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "d"
-      ]
+      "before": ["d", "d"],
+      "after": ["\"", "_", "d", "d"]
     },
     {
-      "before": [
-        "<Leader>",
-        "p"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "P"
-      ]
+      "before": ["<Leader>", "p"],
+      "after": ["\"", "0", "p"]
     },
     {
-      "before": [
-        "p"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "P"
-      ]
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
     },
     {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     }
   ],
   "vim.leader": "<Space>",
@@ -322,31 +277,21 @@
     "<C-d>": false,
     "<C-c>": false,
     "<C-x>": false,
-    "<C-p>": false
+    "<C-p>": false,
+    "<C-;>": false
   },
   "githubPullRequests.terminalLinksHandler": "github",
   "editor.mouseWheelZoom": true,
-  "workbench.colorTheme": "Everforest Custom",
   "editor.minimap.enabled": false,
   "window.menuBarVisibility": "toggle",
   "vim.statusBarColorControl": true,
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#5f00af",
-    "statusBar.noFolderBackground": "#5f00af",
-    "statusBar.debuggingBackground": "#5f00af"
-  },
   "eslint.codeActionsOnSave.rules": [],
   "editor.formatOnSave": true,
   "javascript.format.enable": false,
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
   "eslint.options": {
-    "extensions": [
-      ".html",
-      ".js",
-      ".vue",
-      ".jsx"
-    ]
+    "extensions": [".html", ".js", ".vue", ".jsx"]
   },
   "eslint.validate": [
     {
@@ -370,7 +315,7 @@
   "editor.formatOnPaste": true,
   "githubPullRequests.pullBranch": "never",
   "editor.detectIndentation": false,
-  "terminal.integrated.fontFamily": "Iosevka Nerd Font",
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
   "git.ignoreRebaseWarning": true,
   "gitlens.codeLens.enabled": false,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -379,5 +324,39 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "remote.SSH.remotePlatform": {
     "192.168.15.2": "macOS"
+  },
+  "window.commandCenter": false,
+  "githubPullRequests.pushBranch": "always",
+  "window.title": " ${profileName}",
+  "workbench.editor.decorations.colors": false,
+  "workbench.activityBar.location": "top",
+  "vim.statusBarColors.insert": "#ff625a",
+  // "vim.statusBarColors.normal": "#9BCF53",
+  "vim.statusBarColors.normal": "#416D19",
+  "vim.statusBarColors.visual": "#8E7AB5",
+  "vim.statusBarColors.replace": "#F3B664",
+  "vim.statusBarColors.commandlineinprogress": "#F3B664",
+  "vim.statusBarColors.searchinprogressmode": "#F3B664",
+  "vim.statusBarColors.visualline": "#8E7AB5",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "github.copilot.editor.enableAutoCompletions": true
+}{
+  "workbench.colorCustomizations": {
+    "gitDecoration.modifiedResourceForeground": "#41deb2",
+    "gitDecoration.deletedResourceForeground": "#ff6b6b",
+    "tab.activeBackground": "#93A996",
+    "tab.activeForeground": "#074804",
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
   }
 }
