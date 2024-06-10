@@ -3,8 +3,12 @@ sudo apt update
 sudo apt install git
 sudo apt install curl
 
-# Git
+# Links
+ln -s ~/dotfiles/zshell/.zshrc ~/.zshrc
 ln -s ~/dotfiles/git/git-configs ~/.gitconfig
+ln -s ~/dotfiles/Code/User/settings.json ~/.config/Code/User/profiles/-148156c3/settings.json
+ln -s ~/dotfiles/Code/User/keybindings.json ~/.config/Code/User/profiles/-148156c3/keybindings.json
+
 
 # Node 20
 # installs nvm (Node Version Manager)
@@ -41,3 +45,4 @@ git clone https://github.com/guhenrique007/astronvim_my_template ~/.config/nvim
 # Tmux
 sudo apt install tmux
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+
