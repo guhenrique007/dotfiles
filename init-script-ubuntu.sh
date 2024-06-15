@@ -46,3 +46,8 @@ git clone https://github.com/guhenrique007/astronvim_my_template ~/.config/nvim
 sudo apt install tmux
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
+# I3
+sudo apt install i3
+ln -s ~/dotfiles/i3/config ~/.config/i3
+
+
