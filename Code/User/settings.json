@@ -58,9 +58,13 @@
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#8E7AB5",
-    "statusBar.noFolderBackground": "#8E7AB5",
-    "statusBar.debuggingBackground": "#8E7AB5",
+    "gitDecoration.modifiedResourceForeground": "#41deb2",
+    "gitDecoration.deletedResourceForeground": "#ff6b6b",
+    "tab.activeBackground": "#93A996",
+    "tab.activeForeground": "#074804",
+    "statusBar.background": "#416D19",
+    "statusBar.noFolderBackground": "#416D19",
+    "statusBar.debuggingBackground": "#416D19",
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
   },
@@ -124,14 +128,14 @@
   "vim.enableNeovim": true,
   "vim.foldfix": true,
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["J"],
-      "after": ["5", "j"]
-    },
-    {
-      "before": ["K"],
-      "after": ["5", "k"]
-    },
+    // {
+    //   "before": ["J"],
+    //   "after": ["5", "j"]
+    // },
+    // {
+    //   "before": ["K"],
+    //   "after": ["5", "k"]
+    // },
     {
       "before": ["<Leader>", "j"],
       "after": ["J"]
@@ -339,16 +343,6 @@
   "vim.statusBarColors.searchinprogressmode": "#F3B664",
   "vim.statusBarColors.visualline": "#8E7AB5",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff"
-  },
-  "remote.autoForwardPortsSource": "hybrid",
-  "github.copilot.editor.enableAutoCompletions": true
-}{
-  "workbench.colorCustomizations": {
     "gitDecoration.modifiedResourceForeground": "#41deb2",
     "gitDecoration.deletedResourceForeground": "#ff6b6b",
     "tab.activeBackground": "#93A996",
@@ -358,5 +352,8 @@
     "statusBar.debuggingBackground": "#005f5f",
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
-  }
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "explorer.confirmDragAndDrop": false
 }
