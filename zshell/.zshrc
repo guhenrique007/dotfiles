@@ -15,6 +15,12 @@ export PATH=$PATH:$ANDROID_SDK/tools
 export PATH=$PATH:$ANDROID_SDK/tools/bin
 export PATH=$PATH:$ANDROID_SDK/platform-tools
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -111,6 +117,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+
+
 alias home="cd ~"
 alias vimconfig="nvim ~/.config/nvim/init.vim"
 alias astroconfig="cd ~/.config/nvim && nvim"
@@ -132,6 +141,12 @@ alias spot="/home/gustavo/.cargo/bin/spotify_player"
 alias kitty="/home/gustavo/.local/kitty.app/bin/kitty"
 alias spotifyd="~/spotifyd/target/release/spotifyd --no-daemon"
 alias tempo="curl wttr.in"
+alias ls-alias="cat ~/.zshrc | grep alias"
+
+# colmeia
+alias colmeia-start="sudo docker start 19c8f52bd8d7 && sudo openvpn ~/gustavo.lima.ovpn"
+alias runcolmeia="~/colmeia/scripts/script.sh"
+
 #alias ncdu="ncdu"
 #alias ranger="ranger"
 
@@ -163,5 +178,8 @@ export NVM_DIR="$HOME/.nvm"
 source /home/gustavo/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # python
-# source .venv/bin/activate
+source .venv/bin/activate
 
+
+# Created by `pipx` on 2024-06-18 14:45:59
+export PATH="$PATH:/home/gustavo/.local/bin"
