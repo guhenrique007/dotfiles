@@ -104,6 +104,11 @@
     "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
+    "key": "alt+q",
+    "command": "-extension.vim_ctrl+b",
+    "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
     "key": "ctrl+shift+8",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
@@ -188,5 +193,72 @@
     "key": "ctrl+enter",
     "command": "-github.copilot.generate",
     "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
-  }
+  },
+  {
+    "key": "alt+q",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+c",
+    "command": "-gitlens.showQuickCommitFileDetails",
+    "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "alt+c",
+    "command": "workbench.action.chat.open"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "-workbench.action.chat.open"
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.action.quickchat.toggle",
+    "when": "chatIsEnabled"
+  },
+  {
+    "key": "ctrl+shift+alt+i",
+    "command": "-workbench.action.quickchat.toggle",
+    "when": "chatIsEnabled"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "workbench.action.terminal.resizePaneUp"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "workbench.action.terminal.resizePaneDown"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.sourceAction",
+    "args": {
+        "kind": "source.addMissingImports",
+        "apply": "first"
+    }
+},
+{
+  "key": "ctrl+c",
+  "command": "workbench.action.terminal.copySelection",
+  "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+},
+{
+  "key": "ctrl+shift+c",
+  "command": "-workbench.action.terminal.copySelection",
+  "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+},
+{
+  "key": "alt+d",
+  "command": "workbench.view.debug",
+  "when": "viewContainer.workbench.view.debug.enabled"
+},
+{
+  "key": "ctrl+shift+d",
+  "command": "-workbench.view.debug",
+  "when": "viewContainer.workbench.view.debug.enabled"
+}
 ]

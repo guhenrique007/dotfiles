@@ -1,6 +1,4 @@
 {
-  /** Window */
-  "window.zoomLevel": -1,
   "window.commandCenter": false,
   "window.density.editorTabHeight": "compact",
   /** Extension: Apc */
@@ -68,7 +66,6 @@
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
   },
-  "workbench.iconTheme": "material-icon-theme",
   /** Workbench Editor */
   "workbench.editor.limit.enabled": false,
   "workbench.editor.limit.perEditorGroup": true,
@@ -88,7 +85,6 @@
   "editor.stickyScroll.enabled": true,
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
-  "editor.tabSize": 2,
   "editor.linkedEditing": true,
   "explorer.confirmDelete": false,
   "security.workspace.trust.untrustedFiles": "open",
@@ -98,6 +94,8 @@
   "editor.fontFamily": "'Hack Nerd Font'",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
+    // "source.fixAll": true,
+    // "source.organizeImports": true
   },
   "editor.lineNumbers": "on",
   "[json]": {
@@ -123,7 +121,7 @@
     "markdown": true,
     "scminput": false,
     "yaml": false,
-    "javascript": false
+    "javascript": true
   },
   "vim.enableNeovim": true,
   "vim.foldfix": true,
@@ -324,14 +322,13 @@
   "gitlens.codeLens.enabled": false,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "workbench.layoutControl.enabled": false,
-  "window.zoomLevel": -1,
   "diffEditor.ignoreTrimWhitespace": false,
   "remote.SSH.remotePlatform": {
     "192.168.15.2": "macOS"
   },
   "window.commandCenter": false,
   "githubPullRequests.pushBranch": "always",
-  "window.title": " ${profileName}",
+  "window.title": " ${folderName}",
   "workbench.editor.decorations.colors": false,
   "workbench.activityBar.location": "top",
   "vim.statusBarColors.insert": "#ff625a",
@@ -355,5 +352,16 @@
   },
   "remote.autoForwardPortsSource": "hybrid",
   "github.copilot.editor.enableAutoCompletions": true,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": -1,
+  "editor.tabSize": 2,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
