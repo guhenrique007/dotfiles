@@ -143,9 +143,11 @@ alias spotifyd="~/spotifyd/target/release/spotifyd --no-daemon"
 alias tempo="curl wttr.in"
 alias ls-alias="cat ~/.zshrc | grep alias"
 
+
 # colmeia
 alias colmeia-start="sudo docker start 19c8f52bd8d7 && sudo openvpn ~/gustavo.lima.ovpn"
-alias runcolmeia="~/colmeia/scripts/script.sh"
+alias colmeia="~/colmeia/scripts/script.sh"
+
 
 #alias ncdu="ncdu"
 #alias ranger="ranger"
@@ -183,3 +185,7 @@ source .venv/bin/activate
 
 # Created by `pipx` on 2024-06-18 14:45:59
 export PATH="$PATH:/home/gustavo/.local/bin"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
