@@ -3,44 +3,52 @@
 	name = Gustavo Lima
 [core]
 	editor = code -n --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [alias]
-        s = !git status -s
-        l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
-        c = !git commit -m 
-        pf = !git push --force-with-lease
-        fixup = !git commit --fixup
-        fix = !git commit --fixup HEAD
-        amend = !git commit --amend
-        rc = !git rebase --continue
-        abort = !git rebase --abort
-        edit = !git config --global --edit
-        gethash = !git log -n1 --format=format:"%H" | xclip
-        hash = !git log -n1 --format=format:"%H" 
-        ck = !git checkout
-        ckn = !git checkout -b
-        cp = !git cherry-pick
-        po = !git pull origin
+  s = !git status -s
+  l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+  c = !git commit -m 
+  pf = !git push --force-with-lease
+  fixup = !git commit --fixup
+  fix = !git commit --fixup HEAD
+  amend = !git commit --amend
+  rc = !git rebase --continue
+  abort = !git rebase --abort
+  edit = !git config --global --edit
+  gethash = !git log -n1 --format=format:"%H" | xclip
+  hash = !git log -n1 --format=format:"%H" 
+  ck = !git checkout
+  ckn = !git checkout -b
+  cp = !git cherry-pick
+  po = !git pull origin
   rbi = !git rebase -i
-        df = !git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
-        rsoft = !git reset --soft HEAD^
-        rhard = !git reset --hard HEAD^
-        undo = !git restore .
-        lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-        lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-        lg = !"git lg1"
+  df = !git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+  rsoft = !git reset --soft HEAD^
+  rhard = !git reset --hard HEAD^
+  undo = !git restore .
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = !"git lg1"
 	pom = !git pull origin main
-	  st = !git stash
-	  sta = !git stash apply
-	  skip = !git update-index --skip-worktree
-	  no-skip = !git update-index --no-skip-worktree
-    resethard = !git reset --hard HEAD
+  st = !git stash
+  sta = !git stash apply
+  skip = !git update-index --skip-worktree
+  no-skip = !git update-index --no-skip-worktree
+  resethard = !git reset --hard HEAD
 [credential "https://github.com"]
-        helper = 
-        helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [pull]
-        rebase = merges
+  rebase = merges
 [push]
-        default = current
+  default = current
 [credential]
 	helper = store
 
