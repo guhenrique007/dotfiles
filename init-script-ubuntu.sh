@@ -54,3 +54,9 @@ sudo apt install i3
 ln -s ~/dotfiles/i3/config ~/.config/i3
 
 
+# Links
+ln -s ~/dotfiles/git/git-configs ~/.gitconfig
+# ln -s ~/dotfiles/Code/User/settings.json ~/.config/Code/User/profiles/-148156c3/settings.json
+# ln -s ~/dotfiles/Code/User/keybindings.json ~/.config/Code/User/profiles/-148156c3/keybindings.json
+
+
