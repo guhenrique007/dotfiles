@@ -8,6 +8,7 @@ ln -s ~/dotfiles/zshell/.zshrc ~/.zshrc
 ln -s ~/dotfiles/git/git-configs ~/.gitconfig
 ln -s ~/dotfiles/Code/User/settings.json ~/.config/Code/User/profiles/-148156c3/settings.json
 ln -s ~/dotfiles/Code/User/keybindings.json ~/.config/Code/User/profiles/-148156c3/keybindings.json
+ln -s ~/dotfiles/i3/config ~/.config/i3/config 
 
 
 # Node 20
@@ -32,6 +33,14 @@ sudo apt install gcc
 sudo apt install build-essential
 $ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
 $ sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+
+# bat
+sudo apt install bat
+mkdir -p ~/.local/bin\nln -s /usr/bin/batcat ~/.local/bin/bat
+
+# Fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Neovim
 sudo apt-get install neovim

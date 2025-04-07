@@ -6,6 +6,7 @@
 [alias]
         s = !git status -s
         l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+        lb = "!sh -c 'git log --oneline --graph --decorate --cherry origin/$0 --not $1' "
         c = !git commit -m 
         pf = !git push --force-with-lease
         fixup = !git commit --fixup
@@ -38,7 +39,7 @@
         helper = 
         helper = !/usr/bin/gh auth git-credential
 [pull]
-        rebase = merges
+	rebase = false
 [push]
         default = current
 [credential]

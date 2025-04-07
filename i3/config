@@ -16,8 +16,11 @@ exec --no-startup-id nm-applet
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym $mod+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym $mod+j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -37,7 +40,7 @@ bindsym $mod+Shift+q kill
 
 # start rofi
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/bin/launcher
-bindsym $mod+q exec --no-startup-id ~/.config/rofi/bin/powermenu
+# bindsym $mod+q exec --no-startup-id ~/.config/rofi/bin/powermenu
 
 # change focus
 bindsym $mod+Left focus left
@@ -52,8 +55,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # container modes (tabbed, split)
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+t layout toggle split
 
 # gaps
 gaps inner 10
@@ -87,6 +90,11 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
+# bindsym $mod+1 workspace number $ws1
+bindsym $mod+w workspace number $ws2
+bindsym $mod+e workspace number $ws3
+bindsym $mod+a workspace number $ws4
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1

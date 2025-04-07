@@ -14,11 +14,15 @@ export PATH=$PATH:$ANDROID_SDK/emulator
 export PATH=$PATH:$ANDROID_SDK/tools
 export PATH=$PATH:$ANDROID_SDK/tools/bin
 export PATH=$PATH:$ANDROID_SDK/platform-tools
+export DOCKER_HOST=127.0.0.1:4243
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -147,6 +151,7 @@ alias ls-alias="cat ~/.zshrc | grep alias"
 # colmeia
 alias colmeia-start="sudo docker start 19c8f52bd8d7 && sudo openvpn ~/gustavo.lima.ovpn"
 alias colmeia="~/colmeia/scripts/script.sh"
+alias colmeia-notes="cd ~/Documents/colmeia-notes"
 
 
 #alias ncdu="ncdu"
@@ -189,3 +194,11 @@ export PATH="$PATH:/home/gustavo/.local/bin"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Load fzf
+source <(fzf --zsh)
+
+
+PATH=~/.console-ninja/.bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

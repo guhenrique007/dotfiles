@@ -60,11 +60,14 @@
     "gitDecoration.deletedResourceForeground": "#ff6b6b",
     "tab.activeBackground": "#93A996",
     "tab.activeForeground": "#074804",
-    "statusBar.background": "#416D19",
-    "statusBar.noFolderBackground": "#416D19",
-    "statusBar.debuggingBackground": "#416D19",
+    "tab.unfocusedActiveForeground": "#074804",
     "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff"
+    "statusBar.debuggingForeground": "#ffffff",
+    "editor.selectionBackground": "#135564",
+    "editor.selectionHighlightBackground": "#135564",
+    "statusBar.background": "#074804",
+    "statusBar.noFolderBackground": "#416D19",
+    "statusBar.debuggingBackground": "#416D19"
   },
   /** Workbench Editor */
   "workbench.editor.limit.enabled": false,
@@ -230,6 +233,10 @@
     {
       "before": ["leader", "l"],
       "after": ["$"]
+    },
+    {
+      "before": ["g", "f"],
+      "after": [""]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
@@ -286,9 +293,7 @@
   "editor.mouseWheelZoom": true,
   "editor.minimap.enabled": false,
   "window.menuBarVisibility": "toggle",
-  "vim.statusBarColorControl": true,
   "eslint.codeActionsOnSave.rules": [],
-  "editor.formatOnSave": true,
   "javascript.format.enable": false,
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
@@ -330,26 +335,28 @@
   "githubPullRequests.pushBranch": "always",
   "window.title": " ${folderName}",
   "workbench.editor.decorations.colors": false,
-  "workbench.activityBar.location": "top",
-  "vim.statusBarColors.insert": "#ff625a",
+  "workbench.activityBar.location": "hidden",
+  // "vim.statusBarColors.insert": "#ff625a"
   // "vim.statusBarColors.normal": "#9BCF53",
-  "vim.statusBarColors.normal": "#416D19",
-  "vim.statusBarColors.visual": "#8E7AB5",
-  "vim.statusBarColors.replace": "#F3B664",
-  "vim.statusBarColors.commandlineinprogress": "#F3B664",
-  "vim.statusBarColors.searchinprogressmode": "#F3B664",
-  "vim.statusBarColors.visualline": "#8E7AB5",
-  "workbench.colorCustomizations": {
-    "gitDecoration.modifiedResourceForeground": "#41deb2",
-    "gitDecoration.deletedResourceForeground": "#ff6b6b",
-    "tab.activeBackground": "#93A996",
-    "tab.activeForeground": "#074804",
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff"
-  },
+  // "vim.statusBarColors.normal": "#416D19",
+  // "vim.statusBarColors.visual": "#8E7AB5",
+  // "vim.statusBarColors.replace": "#F3B664",
+  // "vim.statusBarColors.commandlineinprogress": "#F3B664",
+  // "vim.statusBarColors.searchinprogressmode": "#F3B664",
+  // "vim.statusBarColors.visualline": "#8E7AB5",
+  // "workbench.colorCustomizations": {
+  //   "gitDecoration.modifiedResourceForeground": "#41deb2",
+  //   "gitDecoration.deletedResourceForeground": "#ff6b6b",
+  //   "tab.activeBackground": "#93A996",
+  //   "tab.activeForeground": "#074804",
+  //   "statusBar.background": "#ff625a",
+  //   "statusBar.noFolderBackground": "#ff625a",
+  //   "statusBar.debuggingBackground": "#ff625a",
+  //   "statusBar.foreground": "#ffffff",
+  //   "statusBar.debuggingForeground": "#ffffff",
+  //   "editor.selectionBackground": "#135564",
+  //   "editor.selectionHighlightBackground": "#135564"
+  // },
   "remote.autoForwardPortsSource": "hybrid",
   "github.copilot.editor.enableAutoCompletions": true,
   "explorer.confirmDragAndDrop": false,
@@ -363,5 +370,13 @@
   "editor.tabSize": 2,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+  "git.suggestSmartCommit": false,
+  "prettier.printWidth": 120,
+  "scm.showHistoryGraph": false,
+  "debug.onTaskErrors": "debugAnyway",
+  "typescript.tsserver.maxTsServerMemory": 6072,
+  "scm.repositories.sortOrder": "path",
+  "typescript.tsserver.log": "off",
+  "editor.inlineSuggest.suppressSuggestions": true
 }
