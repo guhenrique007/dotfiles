@@ -25,7 +25,10 @@ git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+rm ~/.zshrc
 ln -s ~/dotfiles/zshell/.zshrc ~/.zshrc
+source ~/.zshrc
+
 
 # Random dependencies
 sudo apt install x-clip
@@ -58,5 +61,11 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 # I3
 sudo apt install i3
 ln -s ~/dotfiles/i3/config ~/.config/i3
+
+
+# Links
+ln -s ~/dotfiles/git/git-configs ~/.gitconfig
+# ln -s ~/dotfiles/Code/User/settings.json ~/.config/Code/User/profiles/-148156c3/settings.json
+# ln -s ~/dotfiles/Code/User/keybindings.json ~/.config/Code/User/profiles/-148156c3/keybindings.json
 
 
